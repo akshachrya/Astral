@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{projectname}}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+	<h1>Hello {{name}}</h1>
+	<table border = 1>
+	  {% for key,value in result.items() %}
+	  	<tr>
+	  		<th>{{key}}</th>
+	  		<th>{{value}}</th>
+	  	</tr>
+
+	  {% endfor %}
+	</table> 
+</body>
+
+</html> 
