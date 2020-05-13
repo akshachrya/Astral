@@ -1,8 +1,62 @@
 {% extends "layout.html" %}
 {%block home%}active{%endblock%}
 {% block content %}
-  <h1>Index</h1>
-  <p class="important">
-    Welcome on my awesome homepage.
-   </p>
+<!-- Form and Table -->
+<div class="row">
+	<div  class="col-sm-4">
+		<form>
+			<label>City:</label>
+			<select>
+				<option>Kathmandu</option>
+				<option>Texas</option>
+			</select>
+			<br>
+			<label>Date</label>
+			<input type="date" name="startdate">
+			<br>
+			<button type="submit">Click</button>
+		</form>
+	</div>
+
+	<div class="col-sm-8">
+		<table style="width:100%" class="table table-condensed">
+			<tr>
+				<th>City Name</th>
+				<th>City Region</th>
+				<th>Timezone</th>
+				<th>Longitude</th>
+				<th>Latitude</th>
+
+			</tr>
+			<tr>
+				<td>A</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+			</tr>
+
+		</table>
+	</div>
+	
+
+</div>
+
+<!-- Datatable -->
+<div class="row">
+	<table style="width:100%" class="table table-condensed">
+		<thead>
+            <tr>
+                  <th>Date</th>
+                  <th>Dawn</th>
+                  <th>Sunrise</th>
+                  <th>Sunset</th>
+                  <th>Dusk</th>
+            </tr>
+        </thead>
+
+	</table>
+
+</div>  	
 {% endblock %}
