@@ -22,6 +22,6 @@ def send():
 		sunset=suns['sunset'].strftime("%H:%M:%S")
 		dusk=suns['dusk'].strftime("%H:%M:%S")
 		noon=suns['noon'].strftime("%H:%M:%S")
-		table1={'city':city.name,'region':city.region,'timezone':city.timezone,'long':city.longitude,'lat':city.latitude}
+		table1={'city':city.name,'region':city.region,'timezone':city.timezone,'long':round(city.longitude,2),'lat':round(city.latitude,2)}
 		table2={'date':orgdate,'dawn':dawn,'sunrise':sunrise,'sunset':sunset,'dusk':dusk,'noon':noon}
 		return json.dumps({'table1':table1,'table2':table2})
