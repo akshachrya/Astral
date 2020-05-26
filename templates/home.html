@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="col-sm-4 bordermaker">
 		<form id='cityform'>
-		  <div class="form-group">
+		  <div class="form-group col-md-12">
 		    <label>City</label>
 			<select id="cityselect" class="form-control">
 				{% for i in cities %}
@@ -13,19 +13,24 @@
 				{%endfor%}
 			</select>
 		  </div>
-		  <div class="form-group">
-		    <label>Date</label>
+		  <div class="form-group col-md-6">
+		    <label>Start Date</label>
 		    <input id="citydate" type="date" class="form-control" required>
 		  </div>
-
+		  <div class="form-group col-md-6">
+		    <label>End Date</label>
+		    <input id="citydate1" type="date" class="form-control" required>
+		  </div>
+		  <div class="form-group col-md-12">
 		  <button type="submit" class="btn btn-primary">Click</button>
+		</div>
 		</form>
 	</div>
+	<div class="col-sm-8">
+		<br>
+		<br>
+		<br>
 
-	<div class="col-sm-8 bordermaker">
-		<br>
-		<br>
-		<br>
 		<table style="width:100%" class="table table-condensed">
 			<tr>
 				<th>City Name</th>
@@ -46,36 +51,26 @@
 		</table>
 		<br>
 		<br>
+		<br>
 	</div>
-	
-
-</div>
+</div>	
 <div class="row">
 	<br>
 	<br>
 </div>
 <!-- Datatable -->
 <div class="row">
-	<table style="width:100%" class="table table-condensed">
-            <tr>
-                  <th>Date</th>
-                  <th>Dawn</th>
-                  <th>Sunrise</th>
-                  <th>Noon</th>
-                  <th>Sunset</th>
-                  <th>Dusk</th>
-            </tr>
-            <tr id='tablesss'>
-            	<td>Date</td>
-                  <td>Dawn</td>
-                  <td>Sunrise</td>
-                  <td>Noon</td>
-                  <td>Sunset</td>
-                  <td>Dusk</td>
-            </tr>
-	</table>
+	<div id='hidetable'>
+		<table style="width:100%" class="table table-condensed">
+			<tr><th>Date</th><th>Dawn</th><th>Sunrise</th><th>Noon</th><th>Sunset</th><th>Dusk</th></tr>
+			 <tr><td>Date</td><td>Dawn</td><td>Sunrise</td><td>Noon</td><td>Sunset</td><td>Dusk</td></td>
+		</table>
+	</div>
+	
+	<div id='tablesss'></div>
 
-</div>  
+
+	</div>  
 
 <script src="/static/js/home.js"></script>
 	
